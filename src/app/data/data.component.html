@@ -1,0 +1,13 @@
+<table>
+  <tr>
+      <th>Sno</th>
+      <th>Name</th>
+      <th>Online</th>
+  </tr>
+  <tr *ngFor="let datum of data; let oddRecord=odd; let myIndex=index; let evenRecord=even; let firstRecord=first; let lastRecord=last;" 
+      [ngClass]="{odd:oddRecord, even:evenRecord, last:lastRecord, first:firstRecord}">
+      <td>{{myIndex+1}}</td>
+      <td>{{datum.name}}</td>
+      <td>{{datum.online}}</td>
+  </tr>
+</table>
